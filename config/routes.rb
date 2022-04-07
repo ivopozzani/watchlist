@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   post '/wallet/items', to: 'wallet_items#create'
   delete '/wallet/items', to: 'wallet_items#destroy'
   get '/alerts', to: 'alerts#index'
+  get '/emails', to: 'emails#index'
 
   mount Sidekiq::Web => '/sidekiq'
 end
