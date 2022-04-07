@@ -1,4 +1,10 @@
+:queues:
+  - priority
+  - default
 :schedule:
-  update_all_assets_job:
-    cron: "0 * * * * *"
-    class: UpdateAllAssetsJob
+  update_wallet_assets_job:
+    every: "1s"
+    class: UpdateWalletAssetsJob
+  update_not_wallet_assets_job:
+    every: "1s"
+    class: UpdateNotWalletAssetsJob
