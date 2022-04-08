@@ -1,0 +1,13 @@
+Hello <%= @user.email %> !!!!!
+===============================================
+
+You're receiving this because you clicked on the specific link you main page!
+Find your list of assets bellow!
+
+<% @wallet_items.each do |item| %>            
+  <%= item.symbol %> <%= Money.from_cents(item.last_quote_price, item.currency).format %>
+<% end %>
+
+It's nice to hear from you!
+
+Thanks for joining and have a great day!
